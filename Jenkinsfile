@@ -9,7 +9,7 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh 'docker build -t sameerchandorkar/dp-alpine:latest .'
+        sh 'docker build -t sameerchandorkar/jenkins:alpine .'
       }
     }
     stage('Login') {
@@ -19,7 +19,7 @@ pipeline {
     }
     stage('Push') {
       steps {
-        sh 'docker push sameerchandorkar/dp-alpine:latest'
+        sh 'docker push sameerchandorkar/jenkins:alpine'
       }
     }
   }
